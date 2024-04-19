@@ -6,6 +6,7 @@ class BestTimeToBuyAndSellTheStock extends App {
       } else {
         require(prices.forall(_ >= 0), "Input array should contain non-negative integers")
         @tailrec
+
         def maxProfitHelp(prices: List[Int], maxProfit: Int, lastBuy: Int): Int = {
           prices match {
             case Nil => maxProfit
